@@ -23,15 +23,27 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
 
       var notAddr = false;
       // non standard input
-      if (items[i].scriptSig && !items[i].addr) {
+      if (items[i].scriptSig && !items[i].addr && !items[i].isZerocoinSpend) {
         items[i].addr = 'Unparsed address [' + u++ + ']';
         items[i].notAddr = true;
         notAddr = true;
       }
 
+      if (items[i].scriptSig && !items[i].addr && items[i].isZerocoinSpend) {
+        items[i].addr = 'Zerocoin spend [' + u++ + ']';
+        items[i].notAddr = true;
+        notAddr = true;
+      }
+
       // non standard output
-      if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses) {
+      if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses && !items[i].isZerocoinMint) {
         items[i].scriptPubKey.addresses = ['Unparsed address [' + u++ + ']'];
+        items[i].notAddr = true;
+        notAddr = true;
+      }
+
+      if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses && items[i].isZerocoinMint) {
+        items[i].scriptPubKey.addresses = ['Zerocoin mint'];
         items[i].notAddr = true;
         notAddr = true;
       }
