@@ -113,7 +113,7 @@ margin-left: 0;
   background-color: #F0F7E2;
 }
 .navbar { min-height: 64px; }
-.navbar-default .navbar-toggle { 
+.navbar-default .navbar-toggle {
   border-color: #fff;
   margin-top: 15px;
 }
@@ -576,7 +576,7 @@ margin-left: 0;
   text-align: center;
 }
 
-.tx-id span { 
+.tx-id span {
   font-size: 40px;
   margin: 30px 0;
 }
@@ -621,7 +621,7 @@ margin-left: 0;
   height: 45px;
 }
 #powered a.bitcore {
-  background-image: url('../img/logo.svg');
+  background-image: url('../img/logo.svg?zcoin');
   background-size: 80px;
   width: 30%;
 }
@@ -724,7 +724,7 @@ a.v_highlight_more {
 @media (max-width: 991px) {
   .status {
     display: none;
-  } 
+  }
   .navbar-form {
     width: auto;
   }
@@ -775,7 +775,7 @@ a.v_highlight_more {
   }
   .status {
     display: none;
-  } 
+  }
   #wrap>.container {
     padding: 50px 15px 0;
   }
@@ -857,3 +857,129 @@ a.v_highlight_more {
   }
 }
 
+/* Zcoin - Insight styles */
+
+/*-- Zcoin main colors
+
+Green: 			#23B852;
+Dark Violet: 	#20202E;
+White: 			#ffffff;
+
+--*/
+
+/* typography --------------------------------------------------------------------*/
+
+html, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-default .navbar-nav>li>a  {
+	font-family: Arial, Helvetica, Ubuntu, sans-serif;
+}
+a, a:hover {color: #23B852;}
+
+
+/* misc */
+.btn-primary {
+	background-color: #23B852;
+	border: 1px solid #23B852;
+}
+.progress-bar-info, {
+	background-color: #23B852;
+}
+.block-id {
+    background-color: #20202E !important;
+    border: none !important;
+    margin: 20px auto 25px auto;
+    padding: 15px 10px;
+    width: 165px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    -webkit-border-radius: 6px !important;
+}
+.block-id h3 span {
+	font-size: 24px;
+	margin: 0 0 20px 0;
+}
+.m20v {
+    margin: 10px 0;
+}
+.m50v {
+    margin: 15px 0;
+}
+.block-id span {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.txvalues-primary {
+    background-color: #23B852 !important;
+}
+
+/* navbar ------------------------------------------------------------------------*/
+.navbar-default {
+	background-color: #20202E;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>.active>a {
+	background-color: none;
+	color: rgba(255,255,255,0.7);
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: rgba(255,255,255,0.15);
+	color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.active>a:focus {
+	background-color: #23B852;
+	color: #ffffff;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: #23B852;
+    color: #ffffff;
+}
+
+.status {
+	background-color: #23B852;
+}
+/* search form */
+.navbar-form .form-control {
+	background-color: rgba(255,255,255,0.15);
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.navbar-form .form-control:focus {
+	background-color: rgba(255,255,255,0.9);
+	color: #000000;
+}
+#search:focus {
+	color: #000000;
+}
+#search::-webkit-input-placeholder{
+	color: rgba(255,255,255,0.4);
+}
+#search:focus::-webkit-input-placeholder{
+	color: rgba(0,0,0,0.9);
+}
+
+/* secondary navbar */
+.secondary_navbar {
+	background: #41414D;
+	color: #ffffff;
+}
+.secondary_navbar  h3  {
+	color: #ffffff !important;
+}
+
+
+/* main content ------------------------------------------------------------------*/
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+	background-color: rgba(34,184,82,0.08) !important;
+}
+
+/* footer ------------------------------------------------------------------------*/
+#footer {
+	background-color: #20202e;
+}
